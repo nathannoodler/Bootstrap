@@ -1,0 +1,39 @@
+ 
+    <table class="table table-bordered table-striped">
+  <tbody>
+    <tr>
+      <td>ReserveID</td>
+      <td>ReserveName</td>
+      <td>OSGrid</td>
+      <td>Description</td>
+     <td>Edit Reserve</td>
+      <td>View Species</td>
+    </tr>
+
+    {{#each data}}
+      <tr>
+  <td>{{ReserveID}}</td>
+  <td>{{ReserveName}}</td>
+  <td>{{OSGrid}}</td>
+  <td>{{Description}}</td>
+ <td><a href=/editreserve?ReserveID={{ReserveID}}>Edit</a></td> 
+  <td><a href=/viewspecies?ReserveID={{ReserveID}}>View</a></td>
+      </tr>
+    {{/each}}
+  <tr>
+        <form method=post action=/insertreserve>
+    <td>-</td>
+    <td><input type=text name=ReserveName ></td>
+    <td><input type=text name=OSGrid ></td>
+    <td><input type=text name=Description ></td>
+    <td><input type=submit value="Add new record"></td>
+  </form>
+      </tr> 
+
+  </tbody>
+</table>
+
+    
+
+
+    

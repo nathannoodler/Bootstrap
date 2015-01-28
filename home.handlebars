@@ -1,0 +1,56 @@
+<table class="table table-bordered table-striped">
+  <tbody>
+    <tr>
+      <td>RecordID</td>
+      <td>UserID</td>
+      <td>ReserveID</td>
+      <td>Date</td>
+      <td>Time</td>
+      <td>Latitude</td>
+      <td>Longtitude</td>
+      <td>Abundance</td>
+      <td>LocationImage</td>
+      <td>SpeciesImage</td>
+      <td>Comment</td>
+      <td>Species</td>
+      <td>Edit</td>
+    </tr>
+
+    {{#each data}}
+      <tr>
+	<td>{{RecordID}}</td>
+	<td>{{UserID}}</td>
+	<td>{{ReserveID}}</td>
+	<td>{{Date}}</td>
+	<td>{{Time}}</td>
+	<td>{{Latitude}}</td>
+	<td>{{Longitude}}</td> 
+	<td>{{Abundance}}</td>
+	<td><a href=/{{LocationPhoto}}>{{LocationPhoto}}</a></td>
+	<td><a href=/{{SpeciesPhoto}}>{{SpeciesPhoto}}</a></td>
+	<td>{{Comment}}</td>
+	<td>{{SpeciesName}}</td>
+	<td><a href=/edit?RecordID={{RecordID}}>Edit</a></td>
+      </tr>
+    {{/each}}
+      <tr>
+        <form enctype=multipart/form-data method=post action=/insert>
+	  <input type=hidden name=web value=true>
+	  <td>-</td>
+	  <td><input type=text name=UserID ></td>
+	  <td><input type=text name=ReserveID ></td>
+	  <td><input type=text name=Date ></td>
+	  <td><input type=text name=Time ></td>
+	  <td><input type=text name=Latitude ></td>
+	  <td><input type=text name=Longitude ></td> 
+	  <td><input type=text name=Abundance ></td>
+	  <td><input type=file name=LocationPhoto ></td>
+	  <td><input type=file name=SpeciesPhoto ></td>
+	  <td><input type=text name=Comment ></td>
+	  <td><input type=text name=SpeciesName ></td>
+	  <td><input type=submit></td>
+	</form>
+      </tr>
+
+  </tbody>
+</table>

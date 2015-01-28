@@ -1,0 +1,9 @@
+.jumbotron
+{
+	background-image:url('Forest-road.jpg');
+	color:white;
+	
+	min-height:400px;
+	margin-top: 0px;
+	margin-bottom:8px;
+}

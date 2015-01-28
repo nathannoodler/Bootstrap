@@ -1,0 +1,35 @@
+<!-- form stuff--> 
+			<div class="well">
+			<div class="container">
+			<form action"" class="form-inline">	
+				<div class="form-groupsdf has-error">
+					<p>
+					{{#if UserID}}
+					<!-- this if for the hello UserID--> 
+					<strong>Hi</strong>
+					{{UserID}}
+					</p>
+
+					<label for="element-1" class="sr-only"> This is the text of the label</label>
+					<input type="text" id="element-1" class="form-control" placeholder="enter uid">
+					<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+					<p class="help block"> Please enter a valid user id</p>
+				</div><!-- ends form group class-->
+				
+				<div class="form-groupsdf has-error">
+					<label for="element-2" class="sr-only"> This is the text of the label</label>
+					<input type="text" id="element-2" class="form-control" placeholder="password">
+					<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+					<p class="help block"> Please enter a valid password</p>
+					<div class="checkbox">
+						<label for=""><input type="checkbox"> Remember me</label>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary"> Sign in </button>
+				{{else}}
+				<button type="button" class="btn btn-primary"> Sign out</button>
+				{{/if}}
+				<hr>
+				</form>
+			</div>
+		</div>	

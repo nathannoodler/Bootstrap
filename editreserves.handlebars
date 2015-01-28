@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover table-condensed">
+  <tbody>
+    <tr>
+      <td>ReserveID</td>
+      <td>ReserveName</td>
+      <td>OSGrid</td>
+      <td>Description</td>
+    </tr>
+
+    {{#each data}}
+      <form method=post action=/updatereserve>
+	<input type=hidden name=ReserveID value={{ReserveID}}>
+      <tr>
+	<td>{{ReserveID}}</td>
+	<td><input type=text name=ReserveName value="{{ReserveName}}"></td>
+	<td><input type=text name=OSGrid value="{{OSGrid}}"</td>
+	<td><input type=text name=Description value="{{Description}}"</td>
+	<td><input type=submit></td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table>
